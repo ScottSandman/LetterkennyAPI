@@ -1,0 +1,252 @@
+body {
+  width: 100vw;
+  margin: auto;
+}
+
+.fixed {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+header {
+  display: flex;
+  height: 100px;
+  width: 100vw;
+  background-color: rgb(44, 97, 44);
+  font-family: arial black;
+  justify-content: center;
+}
+
+.header-image {
+  display: flex;
+  height: 150px;
+  width: 300px;
+  justify-content: center;
+  z-index: 10;
+  cursor: pointer;
+}
+
+.header-text {
+  color: white;
+  font-size: 24px;
+  font-family: arial black;
+  margin: auto;
+}
+
+nav {
+  height: 50px;
+  display: flex;
+  background-color: white;
+}
+
+.side-nav-left,
+.side-nav-right {
+  background-color: rgb(44, 97, 44);
+  color: white;
+  width: 0;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  position: fixed;
+  transition: 0.75s;
+  top: 100px;
+  z-index: 2;
+}
+
+.side-nav-left {
+  left: 0;
+}
+
+.side-nav-right {
+  right: 0;
+}
+
+a {
+  font-size: 18px;
+  width: 100px;
+  text-align: center;
+}
+
+a:hover {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.fa {
+  font-size: 30px;
+  margin-top: 10px;
+  color: rgb(44, 97, 44);
+  cursor: pointer;
+  z-index: 1;
+}
+
+.fa-hand-o-right {
+  position: fixed;
+  left: 0;
+  margin-left: calc((100vw / 2) - 225px);
+}
+
+.fa-hand-o-left {
+  position: fixed;
+  right: 0;
+  margin-right: calc((100vw / 2) - 225px);
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  width: 75vw;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 160px;
+}
+
+/* .container::after {
+  content: "";
+  flex: auto;
+} */
+
+.season {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.seasonImg {
+  width: 250px;
+  height: auto;
+}
+
+.show-info {
+  display: flex;
+  margin: auto;
+  width: 75vw;
+  font-size: 16px;
+  text-align: justify;
+  color: rgb(44, 97, 44);
+}
+
+.show-image {
+  width: 75vw;
+  height: 425px;
+  display: flex;
+  margin: auto;
+  object-fit: cover;
+  object-position: 0 45%;
+}
+
+.seasons {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.episode {
+  display: flex;
+  width: 260px;
+  border: 5px solid rgb(44, 97, 44);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.episode-details {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.episode-text {
+  color: rgb(44, 97, 44);
+}
+
+.episode-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.episode-summary {
+  display: flex;
+  margin: auto;
+  width: 225px;
+  text-align: justify;
+}
+
+.cast {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.cast-details {
+  text-align: center;
+  color: rgb(44, 97, 44);
+}
+
+.character-name {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.crew {
+  width: 200px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.crew-text {
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(44, 97, 44);
+}
+
+@media only screen and (max-width: 800px) {
+  header {
+    height: 150px;
+  }
+
+  .header-text {
+    display: none;
+  }
+
+  .side-nav-left,
+  .side-nav-right {
+    width: 50vw;
+    top: 150px;
+  }
+
+  a {
+    font-size: 16px;
+    width: 100px;
+  }
+
+  a:hover {
+    font-size: 18px;
+  }
+
+  .fa {
+    font-size: 25px;
+  }
+
+  .fa-hand-o-right {
+    position: fixed;
+    left: 0;
+    margin-left: calc(100vw / 2);
+  }
+
+  .fa-hand-o-left {
+    position: fixed;
+    right: 0;
+    margin-right: calc(100vw / 2);
+  }
+
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 75vw;
+    margin: auto;
+    justify-content: space-evenly;
+    margin-top: 210px;
+  }
+}

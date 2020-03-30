@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Look up all your favoite Letterkenny episodes, see what your favorite cast member is up to and basically all things Letterkenny"
+    />
+    <meta name="application-name" content="Letterkenny" />
+    <title>All Things Letterkenny</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body onLoad="getShow('http://api.tvmaze.com/shows/14055')">
+    <div class="fixed">
+      <header class="row">
+        <div class="header-text">PITTER PATTER</div>
+        <img
+          class="header-image"
+          src="./images/letterkenny_logo.png"
+          onclick="getShow('http://api.tvmaze.com/shows/14055')"
+        />
+        <div class="header-text">LET'S GET AT'ER</div>
+      </header>
+      <nav>
+        <i class="fa fa-hand-o-right" onclick="openNav()"></i>
+        <i class="fa fa-hand-o-left" onclick="openNav()"></i>
+        <div id="sideNavLeft" class="side-nav-left">
+          <a id="seasons" onclick="createUrl('/seasons', 'seasons')">
+            Seasons
+          </a>
+          <a id="crewNav" onclick="createUrl('/crew', 'crew')">
+            Crew
+          </a>
+        </div>
+        <div id="sideNavRight" class="side-nav-right">
+          <a id="castNav" onclick="createUrl('/cast', 'cast')">
+            Cast
+          </a>
+          <a
+            id="episodes"
+            onclick="createUrl('/episodes?specials=14055', 'episodes')"
+          >
+            Episodes
+          </a>
+        </div>
+      </nav>
+    </div>
+    <div class="container" id="render"></div>
+    <footer></footer>
+  </body>
+</html>
