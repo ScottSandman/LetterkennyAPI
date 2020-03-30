@@ -136,6 +136,7 @@ a:hover {
   margin: auto;
   object-fit: cover;
   object-position: 0 45%;
+  margin-top: 10px;
 }
 
 .seasons {
