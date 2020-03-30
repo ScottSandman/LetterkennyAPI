@@ -131,7 +131,7 @@ a:hover {
 
 .show-image {
   width: 75vw;
-  height: 425px;
+  height: 600px;
   display: flex;
   margin: auto;
   object-fit: cover;
