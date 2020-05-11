@@ -101,7 +101,7 @@ a:hover {
   flex-flow: row wrap;
   width: 75vw;
   margin: auto;
-  justify-content: space-between;
+  justify-content: flex-start;
   margin-top: 160px;
 }
 
@@ -113,6 +113,7 @@ a:hover {
 .season {
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .seasonImg {
@@ -150,6 +151,7 @@ a:hover {
   border: 5px solid rgb(44, 97, 44);
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .episode-details {
@@ -177,6 +179,7 @@ a:hover {
 .cast {
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 10px;
 }
 
 .cast-details {
